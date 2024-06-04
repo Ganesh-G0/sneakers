@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
+  <title>sneakers</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="media.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav id="desktop-nav">
+      <div class="brand-links-div">
+        <div class="brand"><img src="./images/logo.svg" alt="brand logo" draggable="false"></div>
+        <ul class="nav-links">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">men</a></li>
+          <li><a href="#">women</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>    
+      </div>
+      <div class="cart-avatar-div">
+        <div class="cart"> 
+          <button class="cart-btn">
+            <span class="num-in-cart-desktop"></span>          
+            <img class="cart-icon" src="./images/icon-cart.svg" alt="cart icon" draggable="false">
+          </button>
+          <div class="in-cart">
+            <p>cart</p>
+            <hr>
+            <div class="cart-items">
+              <div class="in-cart-product">
+                <img class="thumbnail-icon" src="./images/image-product-1-thumbnail.jpg" alt="thumbnail" draggable="false">
+                <div class="cart-product-text">
+                  <p>fall limited edition sneakers</p>
+                  <p>$125.00 x <span class="num-of-product"></span> 
+                    <span class="price"> $<span class="total-price"></span>.00</span>
+                  </p>
+                </div>
+                <img class="delete-icon" src="./images/icon-delete.svg" alt="delete icon" draggable="false">
+              </div>
+              <button class="checkout-btn">checkout</button>              
+            </div>
+            <div class="cart-empty">
+              <p>Your cart is empty.</p>
+            </div>
+          </div>
+        </div>
+        <img class="avatar" src="./images/image-avatar.png" alt="avatar" draggable="false">
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="brand-ham-div">
+        <div class="brand">
+          <img src="./images/logo.svg" alt="logo" draggable="false">
+        </div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="menu-links">
+            <li><a href="#" onclick="toggleMenu()">Collections</a></li>
+            <li><a href="#" onclick="toggleMenu()">men</a></li>
+            <li><a href="#" onclick="toggleMenu()">women</a></li>
+            <li><a href="#" onclick="toggleMenu()">about</a></li>
+            <li><a href="#" onclick="toggleMenu()">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="cart-avatar-div menu-open">
+        <div class="cart"> 
+          <button class="cart-btn">
+            <span class="num-in-cart"></span>          
+            <img class="cart-icon" src="./images/icon-cart.svg" alt="cart icon"  draggable="false">
+          </button>
+          <div class="in-cart">
+            <p>cart</p>
+            <hr>
+            <div class="cart-items">
+              <div class="in-cart-product">
+                <img class="thumbnail-icon" src="./images/image-product-1-thumbnail.jpg" alt="thumbnail"  draggable="false">
+                <div class="cart-product-text">
+                  <p>fall limited edition sneakers</p>
+                  <p>$125.00 x <span class="num-of-product"></span> 
+                    <span class="price"> $<span class="total-price"></span>.00</span>
+                  </p>
+                </div>
+                <img class="delete-icon" src="./images/icon-delete.svg" alt="delete icon" draggable="false">
+              </div>
+              <button class="checkout-btn">checkout</button>              
+            </div>
+            <div class="cart-empty">
+              <p>Your cart is empty.</p>
+            </div>
+          </div>
+        </div>
+        <img class="avatar" src="./images/image-avatar.png" alt="avatar" draggable="false">
+        <div class="overlay"></div>
+      </div>
+    </nav>  
+  </header>
+  <main>
+    <div class="img-div">
+      <div class="switch-icon-div">
+        <img class="prev-icon img-switch-icon" src="./images/icon-previous.svg" alt="previous icon" draggable="false">
+        <img class="next-icon img-switch-icon" src="./images/icon-next.svg" alt="next icon" draggable="false">
+      </div>
+      <div class="hero-img">
+        <img class="img1" src="./images/image-product-1.jpg" alt="a pair of shoes" draggable="false">
+        <img class="img2" src="./images/image-product-2.jpg" alt="a pair of shoes" draggable="false">
+        <img class="img3" src="./images/image-product-3.jpg" alt="a pair of shoes" draggable="false">
+        <img class="img4" src="./images/image-product-4.jpg" alt="a pair of shoes" draggable="false">
+      </div>
+      <div class="thumbnail-div">
+        <img class="thumbnail-img thumb1 active" src="./images/image-product-1-thumbnail.jpg" alt="a thumbnail" draggable="false">
+        <img class="thumbnail-img thumb2" src="./images/image-product-2-thumbnail.jpg" alt="a thumbnail" draggable="false">
+        <img class="thumbnail-img thumb3" src="./images/image-product-3-thumbnail.jpg" alt="a thumbnail" draggable="false">
+        <img class="thumbnail-img thumb4" src="./images/image-product-4-thumbnail.jpg" alt="a thumbnail" draggable="false">
+      </div>
+    </div>
+    <div class="img-overlay open">
+      <div class="overlay-img-div">
+        <div class="overlay-hero-img">
+          <div class="overlay-switch-icon">
+            <img class="over-prev-icon overlay-img-switch-icon" src="./images/icon-previous.svg" alt="previous icon" draggable="false">
+            <img class="over-next-icon overlay-img-switch-icon" src="./images/icon-next.svg" alt="next icon" draggable="false">
+          </div>
+          <img class="over-img1" src="./images/image-product-1.jpg" alt="a pair of shoes" draggable="false">
+          <img class="over-img2" src="./images/image-product-2.jpg" alt="a pair of shoes" draggable="false">
+          <img class="over-img3" src="./images/image-product-3.jpg" alt="a pair of shoes" draggable="false">
+          <img class="over-img4" src="./images/image-product-4.jpg" alt="a pair of shoes" draggable="false">
+          <div class="close-icon">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="overlay-thumbnail-div">
+          <img class="thumbnail-img over-thumb1 active" src="./images/image-product-1-thumbnail.jpg" alt="a thumbnail" draggable="false">
+          <img class="thumbnail-img over-thumb2" src="./images/image-product-2-thumbnail.jpg" alt="a thumbnail" draggable="false">
+          <img class="thumbnail-img over-thumb3" src="./images/image-product-3-thumbnail.jpg" alt="a thumbnail" draggable="false">
+          <img class="thumbnail-img over-thumb4" src="./images/image-product-4-thumbnail.jpg" alt="a thumbnail" draggable="false">
+        </div>
+      </div>
+    </div>
+    <div class="text-div flex-col">
+      <div class="text flex-col">
+        <h1>sneaker company</h1>    
+        <h2>
+          Fall Limited Edition Sneakers
+        </h2>
+        <p>      
+          These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+      </div>
+      <div class="price-div flex-row">
+        <h1 class="flex-row">$125.00 <span>50%</span></h1>      
+        <p>$250.00</p>
+      </div>
+      <div class="quantity-btn-div flex-col">
+        <div class="quantity-div flex-row">
+          <img class="minus-icon num-of-items" src="./images/icon-minus.svg" alt="minus icon" draggable="false">
+          <h1 class="num-to-buy">0</h1>
+          <img class="plus-icon num-of-items"  src="./images/icon-plus.svg" alt="plus icon" draggable="false">
+        </div>
+        <button id="add" class="add-to-cart flex-row"><img src="./images/icon-cart.svg" alt="cart" draggable="false"><span>Add to cart</span></button>
+      </div>
+    </div>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/8eb453f12c.js" crossorigin="anonymous"></script>    
+  <script src="./index.js"></script>
+</body>
+</html>
